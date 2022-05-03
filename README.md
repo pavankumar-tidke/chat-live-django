@@ -1,5 +1,5 @@
-# Chat-app-tutorial
-## Real-Time Chatting app in Django with Channels. (Whatsapp Web Clone)
+# Chat app using Django
+## Real-Time Chatting app in Django with Channels. 
 You can chat with multiple persons by staying on the same page.
 
-Explanation for this repository : https://youtu.be/205tbCUl4Uk
+ 
