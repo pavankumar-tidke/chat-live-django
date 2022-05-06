@@ -114,8 +114,4 @@ function get_active_thread_id(){
     return thread_id
 }
 
- 
-
-$('.logout-btn').hover(function () {
-    $(".l-name").toggleClass("logout-text").animate(1000) ; 
-});
+  

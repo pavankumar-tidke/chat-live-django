@@ -19,14 +19,26 @@ html {
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
 }
 
-.navbar {
-  
+ 
+.generate-link-modal-btn {
+  font-size: large;
+  background: #00ffea;
+  align-items: center;
+  color: #c23616;
+  margin: auto auto;
+  padding: auto auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.modal-content {
+  background-color: #b68cb7;
 }
 
 .logout-btn {
   /* font-weight: 800; */
   font-size: large;
-  background: transparent;
+  background: #985599;
   align-items: center;
   margin: auto auto;
   padding: auto auto;
@@ -34,7 +46,7 @@ html {
   box-shadow: 0 0 10px #c4c4c4;
 }
 .logout-btn:hover {
-  color: #ff0000 !important;
+  /* color: #ff0000 !important; */
 }
 .logout-btn:focus {
   border: none !important;
@@ -42,7 +54,8 @@ html {
 .logout-text {
   font-weight: 400 !important;
   font-size: medium !important;
-  display: none;
+  display: none; 
+  transition: 1s;
 }
 .app-name{
   font-family: 'Dancing Script', cursive !important; 
