@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-il2i31l!d$kn*!=ro18w*5-)(^pttckg0*-gp!u7g+=o4z$(+j
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL = '/chat'
 
 # Application definition
 

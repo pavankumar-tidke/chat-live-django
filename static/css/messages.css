@@ -1,17 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Iceland&display=swap');
+
+
+
+
 body,
 html {
   height: 100%;
   margin: 0;
 
-  background: url(../image/homebg.jpg);
+  background: #b68cb7;
+
+  /* background: url(../image/homebg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
   /* background: #7f7fd5;
   background: -webkit-linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
 }
 
+.navbar {
+  
+}
+
+.logout-btn {
+  /* font-weight: 800; */
+  font-size: large;
+  background: transparent;
+  align-items: center;
+  margin: auto auto;
+  padding: auto auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #c4c4c4;
+}
+.logout-btn:hover {
+  color: #ff0000 !important;
+}
+.logout-btn:focus {
+  border: none !important;
+}
+.logout-text {
+  font-weight: 400 !important;
+  font-size: medium !important;
+  display: none;
+}
+.app-name{
+  font-family: 'Dancing Script', cursive !important; 
+  font-weight: 800px !important;
+  font-size: 33px !important; 
+}
  
 .chat {
   margin-top: auto;
@@ -20,7 +57,8 @@ html {
 .card {
   height: 90%;
   border-radius: 15px !important;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: transparent !important;
+  box-shadow: 0px 0px 23px #7a7a7a;
 }
 .contacts_body {
   padding: 0.75rem 0 !important;
@@ -34,7 +72,12 @@ html {
 }
 .card-header {
   border-radius: 15px 15px 0 0 !important;
-  border-bottom: 0 !important;
+  border-bottom: 1px #fff !important;
+  background: #a165a2;
+}
+.header-inner {
+  border: 1px;
+  border-bottom: 1px #fff !important;
 }
 .card-footer {
   border-radius: 0 0 15px 15px !important;
@@ -60,7 +103,7 @@ html {
   background-color: rgba(0, 0, 0, 0.3) !important;
   border: 0 !important;
   color: white !important;
-  height: 60px !important;
+  /* height: 60px !important; */
   overflow-y: auto;
 }
 .type_msg:focus {
@@ -142,7 +185,7 @@ html {
   color: white;
 }
 .user_info p {
-  font-size: 10px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
 }
 .video_cam {
@@ -156,26 +199,28 @@ html {
   margin-right: 20px;
 }
 .msg_cotainer {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 10px;
-  border-radius: 25px;
-  background-color: #82ccdd;
-  padding: 10px;
-  position: relative;
+  font-weight: 600;
   min-width: 70px;
   text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 9px;
+  border-radius: 5px;
+  background-color: #e4d8e4;
+  position: relative;
+  padding: 4px 15px;
 }
 .msg_cotainer_send {
+  font-weight: 600;
   min-width: 70px;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: 10px;
-  border-radius: 25px;
-  background-color: #78e08f;
-  padding: 10px;
+  margin-right: 9px;
+  border-radius: 5px;
+  background-color:  #adeaeb;
   position: relative;
+  padding: 4px 15px;
 }
 .msg_time {
   position: absolute;
