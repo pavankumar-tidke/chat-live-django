@@ -8,7 +8,7 @@ html {
   height: 100%;
   margin: 0;
 
-  background: #b68cb7;
+  background: #d0a2d1;
 
   /* background: url(../image/homebg.jpg);
   background-repeat: no-repeat;
@@ -19,20 +19,57 @@ html {
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
 }
 
- 
+input::placeholder { 
+  color: #fff !important;
+  opacity: 1;  
+}
+
 .generate-link-modal-btn {
   font-size: large;
-  background: #00ffea;
+  background: #7e3385;
   align-items: center;
-  color: #c23616;
+  color: #fff;
   margin: auto auto;
-  padding: auto auto;
-  border-radius: 15px;
+  padding: 10px 14px;
+  border-radius: 50px;
   box-shadow: 0 0 10px #ffffff;
 }
 
 .modal-content {
   background-color: #b68cb7;
+  height: 600px !important;
+}
+
+.all-search-box {
+  max-width: 800px;
+  background: #b68cb7;
+}
+input:focus {
+  outline: none !important; 
+}
+.all-search-box:focus-visible {
+  background: #b68cb7; 
+}
+
+.res-user-img img{
+  height: 35px;
+  width: 35px;
+  border: 1.5px solid #f5f6fa;
+}
+
+.search-result {
+  height: 400px !important;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+.res-user-name p{
+  font-size: 16px;
+  font-weight: 500;
+}
+.say-hi-btn {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .logout-btn {
@@ -45,9 +82,9 @@ html {
   border-radius: 15px;
   box-shadow: 0 0 10px #c4c4c4;
 }
-.logout-btn:hover {
-  /* color: #ff0000 !important; */
-}
+/* .logout-btn:hover {
+  color: #ff0000 !important;
+} */
 .logout-btn:focus {
   border: none !important;
 }
@@ -60,7 +97,7 @@ html {
 .app-name{
   font-family: 'Dancing Script', cursive !important; 
   font-weight: 800px !important;
-  font-size: 33px !important; 
+  font-size: 50px !important; 
 }
  
 .chat {
@@ -80,7 +117,7 @@ html {
 }
 .msg_card_body {
   overflow-y: auto;
-  max-height: 65%;
+  max-height: 80%;
   padding-bottom: 20px;
 }
 .card-header {
@@ -116,9 +153,37 @@ html {
   background-color: rgba(0, 0, 0, 0.3) !important;
   border: 0 !important;
   color: white !important;
-  /* height: 60px !important; */
+  height: 60px !important;
   overflow-y: auto;
+  border-radius: 10px;
 }
+.send-msg-btn {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  height: 60px !important;
+}
+
+.check-active {
+  display: none;
+}
+.accept-decline-div {
+  background: #a051a9; 
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.decline-btn {
+  color: rgb(0 0 0 / 90%) !important;
+}
+.accept-btn {
+  background: #880092;
+}
+.accept-btn:hover {
+  background: #b500c2;
+}
+
 .type_msg:focus {
   box-shadow: none !important;
   outline: 0px !important;
@@ -145,20 +210,20 @@ html {
   cursor: pointer;
 }
 .contacts {
-  list-style: none;
-  padding: 0;
+  list-style: none; 
 }
 .contacts li {
   width: 100% !important;
-  padding: 5px 10px;
+  padding: 5px 20px;
   margin-bottom: 15px !important;
 }
 .active {
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px; 
 }
 .user_img {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   border: 1.5px solid #f5f6fa;
 }
 .user_img_msg {
@@ -168,8 +233,8 @@ html {
 }
 .img_cont {
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
 }
 .img_cont_msg {
   height: 40px;
@@ -181,8 +246,8 @@ html {
   width: 15px;
   background-color: #4cd137;
   border-radius: 50%;
-  bottom: 0.2em;
-  right: 0.4em;
+  bottom: 0.2px;
+  right: 0.4px;
   border: 1.5px solid white;
 }
 .offline {
@@ -254,8 +319,8 @@ html {
 }
 #action_menu_btn {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
   color: white;
   cursor: pointer;
   font-size: 20px;
@@ -303,6 +368,9 @@ html {
 }
 
 .is_active{
+  display: block !important;
+}
+.is_msg_box_active {
   display: block !important;
 }
 
