@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-il2i31l!d$kn*!=ro18w*5-)(^pttckg0*-gp!u7g+=o4z$(+j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 LOGIN_REDIRECT_URL = '/chat'
 
 # Application definition
@@ -87,6 +87,7 @@ ASGI_APPLICATION = 'myproject.asgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'djongo',
+        # 'NAME': 'chatGo',
         'NAME': 'chatAppTutorial',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {

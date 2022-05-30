@@ -23,7 +23,7 @@ urlpatterns = [
     path('chat/', include('chat.urls')),
     
     # authentication of user 
-    
+
     path('auth', views.user_register, name='auth'), 
     path('register', views.user_register, name='register'),
     path('login', views.user_login, name='login'), 

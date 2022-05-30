@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="shortcut icon" href="{% static 'image/favicon.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/auth.css' %}">
 
     <title>Chat Auth</title>
@@ -72,9 +72,9 @@
                         </div>
                     </fieldset>
                     <div class="error-box">
-                        {% for message in messages %}
+                        <!-- {% for message in messages %}
                             <p id="register_error_msg" class="error-message"><i class="bi bi-exclamation-diamond-fill"></i>{{ message }}</p>
-                        {% endfor %}
+                        {% endfor %} -->
                     </div>
                     <button type="submit" class="btn-signup">Sign Up</button>
                 </form>

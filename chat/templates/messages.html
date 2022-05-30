@@ -23,7 +23,7 @@
     <!-- navbar -->
     <div class="d-flex flex-row justify-content-between navbar mx-5 my-0 py-0">
         <div class="logo">
-            <p class=" app-name"> ChatGo </p>
+            <p class=" app-name my-auto"> ChatGo </p>
         </div>
         <div class="d-flex justify-content-end">
             <!-- <div class="">
@@ -111,9 +111,9 @@
                                 <div class="user_info">
                                     <!-- <span>{{ user.username   }}</span> -->
                                     {% if thread.first_person == user %}
-                                    <span> {{ thread.second_person.username }}</span>
+                                    <span class="other_user_username"> {{ thread.second_person.username }}</span>
                                     {% else %}
-                                    <span> {{ thread.first_person.username }}</span>
+                                    <span class="other_user_username"> {{ thread.first_person.username }}</span>
                                     {% endif %}
 
                                     <p>{{ thread.chatmessage_thread.all.count }} messages</p>
@@ -142,7 +142,7 @@
                                     <div class="d-flex mb-4 replied">
                                         <div class="msg_cotainer_send">
                                             {{ chat.message }} 
-                                            <span class="msg_time_send">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>
+                                            <span class="msg_time_send ">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>
                                         </div>
 
                                     </div>
@@ -151,7 +151,7 @@
                                     <div class="d-flex mb-4 received"> 
                                         <div class="msg_cotainer">
                                             {{ chat.message }}
-                                            <span class="msg_time">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>
+                                            <span class="msg_time ">{{ chat.timestamp|date:"d D" }}, {{ chat.timestamp|time:"H:i" }}</span>
                                         </div>
                                         
                                     </div>
@@ -171,7 +171,7 @@
                         <!-- warning box [START] -->
                         <div class="accept-decline-div check-active px-4 py-2 " id="acc-dic-div">
                             <div class="heading  my-3">
-                                <h5 class="fw-blod">Accept message request from this person ?<span id="first_sender" class="fw-bold"></span> ?</h5>
+                                <h5 class="fw-blod">Accept message request from <span id="first_sender" class="fw-bold"></span> ?</h5>
                             </div>
                             <hr class="mx-3 my-2 text-light">
                             <div class="warning-desc  my-3">
@@ -185,7 +185,7 @@
                         </div>
                         <!-- warning box [END] -->
 
-                        <!-- messgae typing box -->
+                        <!-- messgae typing box [START] -->
                         <div class="typing-msg-div" id="typing-msg">
                             <form id="send-message-form">
                                 <div class="input-group "> 
@@ -198,6 +198,8 @@
                                 </div>
                             </form>
                         </div>
+                        <!-- messgae typing box [END] -->
+
                     </div>
                 </div>
             </div>

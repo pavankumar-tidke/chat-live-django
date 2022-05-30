@@ -1,7 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Iceland&display=swap');
 
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 7px;
+}
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(107, 0, 255);
+  background: linear-gradient( 60deg, rgba(107, 0, 255, 1) 0%, rgba(219, 6, 237, 1) 100%);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8400ffb4;
+}
 
 body,
 html {
@@ -304,14 +321,14 @@ input:focus {
   position: absolute;
   left: 0;
   bottom: -15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   font-size: 10px;
 }
 .msg_time_send {
   position: absolute;
   right: 0;
   bottom: -15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   font-size: 10px;
 }
 .msg_head {

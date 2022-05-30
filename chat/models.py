@@ -30,12 +30,13 @@ class Thread(models.Model):
     
     is_first_msg = models.BooleanField(name='is_first_msg', default=True)
     
-    first_person_send = models.BooleanField(name='first_person_send', default=False)
-    second_person_send = models.BooleanField(name='second_person_send', default=False)
+    # first_person_send = models.BooleanField(name='first_person_send', default=False)
+    # second_person_send = models.BooleanField(name='second_person_send', default=False)
     
     first_sender = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name='first_sender')    
 
     objects = ThreadManager()
+
     class Meta:
         unique_together = ['first_person', 'second_person']
 

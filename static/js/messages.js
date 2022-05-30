@@ -101,6 +101,9 @@ $('.contact-li').on('click', function (){
     let chat_id = $(this).attr('chat-id')
     $('.messages-wrapper.is_active').removeClass('is_active')
     $('.messages-wrapper[chat-id="' + chat_id +'"]').addClass('is_active')
+    let header_username = $('.messages-wrapper[chat-id="' + chat_id +'"] .card-header .user_info span').text();
+    $('#first_sender').text(header_username)
+ 
 
     chech_first_msg(get_active_thread_id())
 })
@@ -134,7 +137,7 @@ $(document).on('keyup', '.all-search-box', function(e) {
     // AJAX request for search query
     var xhr = new XMLHttpRequest();
     var url = `${loc}search_user`;
-   
+    
     xhr.open("POST", url, true);
     xhr.setRequestHeader("X-CSRFToken", csrftoken); 
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -241,7 +244,6 @@ const say_hi = (user_id, receiver_id, param_username) => {
         }
     };
     xhr.send(`user_id=${user_id}&receiver_id=${receiver_id}`);
-   
 }
  
 

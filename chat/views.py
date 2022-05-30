@@ -26,7 +26,7 @@ def index(request):
     if request.user.is_authenticated: 
         return redirect('chat/')
     else:
-        return render(request, 'index.html')
+        return render(request, 'auth.html') 
 
 def user_register(request): 
     if request.user.is_authenticated: 
@@ -78,7 +78,7 @@ def user_login(request):
         context = {}
         return render(request, 'auth.html', context)
 
-
+ 
 ################  above this line all views functions not required user logged in  ##################
 #
 #
@@ -114,19 +114,15 @@ def search_users(request):
     user = ''
     query = request.POST['query']
     if len(query): 
-        user = User.objects.filter(username__icontains=query)
+        user = User.objects.filter(username__icontains=query) 
         
-        ### for multiple executing queries ###
-        # multiple_query = Q(Q(username__icontains=query) | Q(first_name__icontains=query) | Q(email__icontains=query))
-        # user = User.objects.filter(multiple_query) 
     else: 
         user = {}
         print('else is print :: ', request)
     
-    
     # Convert the QuerySet to a List
     list_of_dicts = list(user.values())
-    
+     
     # Convert List of Dicts to JSON
     res = json.dumps(list_of_dicts, indent=4, sort_keys=True, default=str)
  
@@ -159,7 +155,7 @@ def create_new_thread(request):
             new_thread_id = Thread.objects.create(first_person=first_person, second_person=second_person, is_first_msg=True, first_sender=first_person)
             
             # inserting first message "hi" into the newly created thread
-            inserting_message = ChatMessage.objects.create(thread=new_thread_id, user=first_person, message='Hi, this is auto generated.')
+            ChatMessage.objects.create(thread=new_thread_id, user=first_person, message='Hi !')
         
             httpResponse = 'new_thread_created_and_send_message'   
  
